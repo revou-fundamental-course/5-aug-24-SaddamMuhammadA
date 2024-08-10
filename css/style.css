@@ -1,1 +1,45 @@
-/* CSS section */
+/* style Section */
+/* Form untuk keseluruhan style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a0d6f7;
+    /* margin: 0px;
+    padding: 0px; */
+    /* display: flex; */
+    justify-content: center;
+    align: center;
+    height: 100vh;
+}
+/* Header style */
+.main-title {
+    text-align: center;
+}
+
+/* Main style */
+
+main {
+    /* display:flex; */
+    margin: 20px;
+}
+
+/* .form-section {
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+aside {
+    display:flex;
+} */
+
+form {
+    border: 1px solid;
+    padding: 15px;
+    background-color: cadetblue;
+}
+
+aside {
+    padding: 48px;
+}
+
+

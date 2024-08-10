@@ -7,6 +7,77 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <h1 class="main-title">Kalkulator BMI</h1>
+    </header>
+    <!-- End Of Header Section -->
     
+    <!-- Main Section -->
+    <main class="container">
+    <!-- article Section -->
+        <article>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, dolorum. Modi, libero, error magnam eos placeat quis autem eaque est mollitia velit incidunt non similique beatae neque? Molestias perspiciatis distinctio esse cum quo voluptates, libero nisi aperiam officia excepturi ratione perferendis vitae aliquid nesciunt dolorem quos! Illum perferendis est commodi.</p>
+        </article>
+        <section class="form-section">
+            <form>
+        <!-- Form Kiri -->
+            <aside class="form-left">
+            <!-- Form Input Section -->
+                <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" name="name" placeholder="Masukan Nama Kamu">
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Usia</label>
+                    <input type="range" id="age" min="0" max="100" value="23">
+                    <output id="usia-value" for="age">23</output>
+                </div>
+
+                <div class="form-group">
+                    <legend>Jenis Kelamin</legend>
+                    <div class="gender-selection">
+                        <button type="button" class="gender-option" aria-label="Laki-laki">Laki- Laki</button>
+                        <button type="button" class="gender-option" aria-label="Perempaun">Perempuan</button>
+                    </div>
+                </div>
+            </aside>   
+
+            <!-- Form Kanan -->
+            <aside class="form-right">
+                <div class="form-group">
+                    <label for="weight">Berat Badan</label>
+                    <input type="range" id="weight" min="0" max="200" value="65">
+                    <output id="weight" for="weight">65</output>
+                </div>
+
+                <div class="form-group">
+                    <label for="height">Tinggi Badan</label>
+                    <input type="number" id="height" placeholder="Masukan Tinggi Badan Kamu">
+                </div>
+                
+                <div class="form-group">
+                    <legend>Tingkat aktivitas harian</legend>
+                    <div class="activity-selection">
+                        <button type="button" class="activation-option" aria-label="Tidak Aktif">Tidak Aktif</button>
+                        <button type="button" class="activation-option" aria-label="Cukup Aktif">Cukup Aktif</button>
+                        <button type="button" class="activation-option" aria-label="Aktif">Aktif</button>
+                        <button type="button" class="activation-option" aria-label="Tidak Aktif">Sangat Aktif</button>
+                    </div>
+                </div>
+            </aside>
+            <Button id="calculate-button">Hitung</Button>
+        </form>
+        </section>
+    </main>
+    <!-- End of Main Section -->
+
+    <!-- Footer Section -->
+    <footer>
+
+    </footer>
+    <!-- End Of Footer Section -->
+       
 </body>
 </html>
