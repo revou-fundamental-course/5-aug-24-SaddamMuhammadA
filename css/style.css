@@ -1,36 +1,136 @@
-/* style Section */
+:root {
+    --primaryTextColor: #232e35; /* Untuk title atau judul */
+    --secondaryTextColor: #656d72; /* Untuk text biasa seperti paragraph */
+
+    --borderColor: #f1f1f1;
+    --lineColor: #d9d9d9; /* Untuk line di pre-title */
+
+    --primaryBackgroundColor: #fff;
+    --secondaryBackgroundColor: #fbfbfb;
+    --thirdBackgroundColor: #f5f3fe;
+
+    --primaryIconColor: #d6af75;
+    --primaryIconColorHover: #EDC68C;
+
+    --sectionPadding: 6rem 0;
+
+    --itemBorderRadius: 0.7rem;
+}
+
+/* style Section
 /* Form untuk keseluruhan style */
+* {
+    margin: 0;
+    padding: 0;
+    box_sizing: border-box;
+    align-content: center;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #a0d6f7;
-    /* margin: 0px;
-    padding: 0px; */
-    /* display: flex; */
-    justify-content: center;
-    align: center;
-    height: 100vh;
 }
+
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--primaryTextColor);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+p, span, label, input, li {
+    color: var(--secondaryTextColor);
+}
+
+a {
+    text-decoration: none;
+}
+
 /* Header style */
-.main-title {
-    text-align: center;
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+/* Navigasi style */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;   /*menghilangkan tanda list bulat pada navigasi menu */
+    display: flex;      /*membuat list navigasi menu berjajaar ke samping */
+    gap: 3rem;          /*membuat jarak space antar list menu */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: var(--primaryTextColor);
+}
+
+nav ul li {
+    display: flex;          /* Wadah */
+    align-items: center;    /*rata tengah atas bawah*/
+}
+
+nav ul li a {
+    color: var(--primaryTextColor);
+}
+
+/* Introduction */
+#introduction {
+    padding-top: 20px;
+    height: 520px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    aligm-items:center;
+    /* align-items: flex-start; */
+}
+
+.introduction-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.introduction-name span {
+    color: var(--primaryIconColor);
+}
+
+.introduction-right img {
+    width: 90%
+}
+
+.Introduction-right {
+    display: flex;
+    justify-content: center;
 }
 
 /* Main style */
-
-main {
-    /* display:flex; */
-    margin: 20px;
+.container {
+    width: 80%;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius:10px;
+    box-shadow: 0 0 20ox rgba(0, 0, 0, 0.1);
+    padding:20px;
+    margin: auto;
 }
-
-/* .form-section {
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-}
-
-aside {
-    display:flex;
-} */
 
 form {
     border: 1px solid;
@@ -38,8 +138,70 @@ form {
     background-color: cadetblue;
 }
 
-aside {
-    padding: 48px;
+.form-section { */
+    display: flex;
+    flex-direction:row;
+    gap:20px;
+    justify-content:space-beetween;
 }
 
+aside {
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+    gap:20px;
+}
 
+/* .form-left {
+    flex: 50px;
+}
+
+.form-right {
+    flex: 50px;
+} */
+
+.form-group {
+    display:flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.form-left .form-group,
+.form-right .form-group {
+    flex: 1;
+}
+
+p {
+    text-align: justify;
+    margin-top: -10px;
+}
+
+label, legend {
+    font-weight: bold;
+    color: #333333
+}
+
+input[type="text"], input[type="range"], button, output {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input [type="text"] {
+    width: 100%
+}
+
+input [type="text"] {
+    width: 100%;
+}
+
+output {
+    font-weight: bold;
+}
+
+Fieldset {
+    border: none;
+    paddings:0;
+} */
