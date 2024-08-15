@@ -9,8 +9,8 @@
     --secondaryBackgroundColor: #fbfbfb;
     --thirdBackgroundColor: #f5f3fe;
 
-    --primaryIconColor: #d6af75;
-    --primaryIconColorHover: #EDC68C;
+    --primaryIconColor: #94CD7F;
+    --primaryIconColorHover: #C7E2AF;
 
     --sectionPadding: 6rem 0;
 
@@ -22,7 +22,6 @@
 * {
     margin: 0;
     padding: 0;
-    box_sizing: border-box;
     align-content: center;
 }
 
@@ -79,9 +78,14 @@ a {
     font-size: 2rem;
 }
 
-.logo a {
-    color: var(--primaryTextColor);
+.logo img {
+    max-width: 100px;
+    height: auto;
 }
+
+/* .logo a {
+    color: var(--primaryTextColor);
+} */
 
 nav ul li {
     display: flex;          /* Wadah */
@@ -99,6 +103,7 @@ nav ul li a {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     aligm-items:center;
+    gap: 3rem;
     /* align-items: flex-start; */
 }
 
@@ -121,8 +126,84 @@ nav ul li a {
     justify-content: center;
 }
 
+/* main style */
+#bmi {
+    padding: var(--sectionPadding);
+    background: var(--secondaryBackgroundColor);
+    padding: 15px;
+}
+
+.bmi-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns with equal width */
+    gap: 20px;
+    align-items: baseLine;
+}
+
+.bmi-group {
+    display: flex;
+    margin: 0.6rem 0 1.4rem;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.bmi main-container {
+    display: flex;
+    flex-direction:row;
+    gap:20px;
+    justify-content:space-beetween;
+}
+
+.bmi-left {
+    display:grid;
+    flex-direction: column;
+    gap:20px;
+    grid-column: 1;
+}
+
+.bmi-right {
+    grid-column: 2;
+  }
+
+p {
+    text-align: justify;
+    margin-top: -10px;
+}
+
+label, legend {
+    font-weight: bold;
+    color: #333333
+}
+
+input[type="text"], input[type="range"], button, output {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+input [type="text"] {
+    width: 100%
+}
+
+input [type="text"] {
+    width: 100%;
+}
+
+output {
+    font-weight: bold;
+}
+
+Fieldset {
+    border: none;
+    paddings:0;
+} 
+
+
+
 /* Main style */
-.container {
+/* .container {
     width: 80%;
     max-width: 900px;
     background-color: #ffffff;
@@ -132,13 +213,13 @@ nav ul li a {
     margin: auto;
 }
 
-form {
+/* #bmi {
     border: 1px solid;
     padding: 15px;
     background-color: cadetblue;
-}
+} */
 
-.form-section { */
+/* .bmi-section { 
     display: flex;
     flex-direction:row;
     gap:20px;
@@ -150,7 +231,7 @@ aside {
     flex-direction: column;
     flex: 1;
     gap:20px;
-}
+}  */
 
 /* .form-left {
     flex: 50px;
@@ -160,15 +241,15 @@ aside {
     flex: 50px;
 } */
 
-.form-group {
+/* .bmi-group {
     display:flex;
     flex-direction: column;
     gap: 8px;
     width: 100%;
 }
 
-.form-left .form-group,
-.form-right .form-group {
+.bmi-left .form-group,
+.bmi-right .form-group {
     flex: 1;
 }
 

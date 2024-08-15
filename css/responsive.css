@@ -1,0 +1,52 @@
+@media screen and (max-width: 1000px) {
+    p {
+        font-size: 0.9rem;
+        line-height: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    .logo img {
+        width: 70%;
+    }
+
+    .nav a {
+        font-size: 0.9rem;
+    }
+    #introduction {
+        grid-template-columns: 1fr;
+        height: fit-content;
+        justify-item: center;
+    }
+
+    .introduction-right {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        order: -1;
+    }
+
+    .introduction-right img {
+        width: 70%;
+    }
+
+    .introduction-left {
+        text-align: center;
+        padding-bottom: 5rem;
+    }
+
+    .introduction-name {
+        font-size 2.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .about {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav a{
+
+    }
+}
