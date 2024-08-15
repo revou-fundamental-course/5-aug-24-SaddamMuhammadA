@@ -45,6 +45,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .bmi-result-wrapper {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+}
+
 @media screen and (max-width: 600px) {
     .nav a{
 

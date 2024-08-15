@@ -57,17 +57,26 @@
                             <input type="text" id="name" name="name" placeholder="Masukan Nama Kamu">
                         </div>
 
-                        <div class="bmi-group">
-                            <label for="age">Usia</label>
-                            <input type="range" id="age" min="0" max="100" value="23" oninput="updateAgeValue(this.value)">
-                            <output id="age-value" for="age">23</output>
+                        <label for="age">Usia</label>
+                        <div class="bmi-range-age">
+                            <div class="slider-value">
+                                <span>50</span>
+                            </div>
+                            <div class="field">
+                                <input type="range" id="age" min="0" max="100" value="50" steps="1" oninput="updateAgeValue()"> 
+                            </div>
+                            <!-- <output id="age-value" for="age">23</output> -->
                         </div>
 
                         <div class="bmi-group">
                             <legend>Jenis Kelamin</legend>
                             <div class="gender-selection">
-                                <button type="button" class="gender-option" aria-label="Laki-laki">Laki- Laki</button>
-                                <button type="button" class="gender-option" aria-label="Perempaun">Perempuan</button>
+                                <button type="button" class="gender-option" onclick="selectGender(this, 'male')" aria-label="Laki-laki">
+                                    <img src="/assets/male.png" alt="male">
+                                </button>
+                                <button type="button" class="gender-option" onclick="selectGender(this, 'female')" aria-label="Perempaun">
+                                    <img src="/assets/female.png" alt="">    
+                                </button>
                             </div>
                         </div>
                     </aside>   
@@ -75,28 +84,70 @@
                     <!-- Form Kanan -->
                     <aside class="bmi-right">
                         <div class="bmi-group">
-                            <label for="weight">Berat Badan</label>
-                            <input type="range" id="weight" min="0" max="200" value="65">
-                            <output id="weight" for="weight">65</output>
-                        </div>
-
-                        <div class="bmi-group">
                             <label for="height">Tinggi Badan</label>
                             <input type="number" id="height" placeholder="Masukan Tinggi Badan Kamu">
+                        </div>
+
+                        <label for="weight">Berat Badan</label>
+                        <div class="bmi-range-weight">
+                            <div class="slider-value">
+                                <span>100</span>
+                            </div>
+                            <div class="field">
+                                <input type="range" id="weight" min="0" max="200" value="100" oninput="updateWeightValue()" steps="1"> 
+                            </div>
                         </div>
                         
                         <div class="bmi-group">
                             <legend>Tingkat aktivitas harian</legend>
                             <div class="activity-selection">
-                                <button type="button" class="activation-option" aria-label="Tidak Aktif">Tidak Aktif</button>
-                                <button type="button" class="activation-option" aria-label="Cukup Aktif">Cukup Aktif</button>
-                                <button type="button" class="activation-option" aria-label="Aktif">Aktif</button>
-                                <button type="button" class="activation-option" aria-label="Tidak Aktif">Sangat Aktif</button>
+                                <button type="button" class="activity-option" onclick="selectActivity(this, 'inactive')" aria-label="Tidak Aktif">
+                                    <img src="/assets/tidak_aktif.png" alt="Tidak Aktif">
+                                </button>
+                                <!-- <button type="button" class="activity-option" onclick="selectActivity(this, 'light')" aria-label="Tidak Aktif">
+                                    <img src="/assets/cukup_aktif.png" alt="Cukup Aktif">
+                                </button> -->
+                                <button type="button" class="activity-option" onclick="selectActivity(this, 'moderate')" aria-label="Tidak Aktif">
+                                    <img src="/assets/aktif.png" alt="Aktif">
+                                </button>
+                                <!-- <button type="button" class="activity-option" onclick="selectActivity(this, 'active')" aria-label="Tidak Aktif">
+                                    <img src="/assets/sangat_aktif.png" alt="Sangat Aktif">
+                                </button> -->
                             </div>
                         </div>
                     </aside>
-                <Button class="button-hitung" id="calculate-button">Hitung</Button>
-                <Button class="button-reset" id="reset-button">Reset</Button>
+                <button id="calculate-button">Hitung</button>
+                <button id="reset-button">Reset</button>
+                </div>
+            </div>
+        </section>
+
+         <!-- <section class="bmi-result" id="result-section" style="display: none;">
+            <div class="bmi-result-left">
+                <h3 id="hasil-kualitas"></h3>
+                <p id="hasil-bmi"></p>
+                <p id="hasil-ket"></p>
+            </div>
+            <div class="bmi-result-right">
+                <h3 id="kualitas-bmi"></h3>
+                <p id="saran-bmi"></p>
+            </div>
+        </section> -->
+
+        <section class="bmi-result" id="result-section">
+            <div class="bmi-result-wrapper">
+                <div class="bmi-result-left">
+                    <h2 id="hasil-kualitas"></h2>
+                    <br>
+                    <p id="hasil-bmi"></p>
+                    <br>
+                    <p id="hasil-ket"></p>
+                </div>
+                <div class="bmi-result-right">
+                    <br>
+                    <h2 id="kualitas-bmi"></h2>
+                    <br>
+                    <p id="saran-bmi"></p>
                 </div>
             </div>
         </section>
@@ -105,11 +156,12 @@
 
     <!-- Footer Section -->
     <footer>
+        <h3>Copyright Saddam 2024</h1>
 
     </footer>
     <!-- End Of Footer Section -->
 
 
-    <script src="script.js"></script>   
+    <script src="/js/script.js"></script>   
 </body>
 </html>

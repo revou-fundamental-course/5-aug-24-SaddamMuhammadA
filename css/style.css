@@ -2,15 +2,15 @@
     --primaryTextColor: #232e35; /* Untuk title atau judul */
     --secondaryTextColor: #656d72; /* Untuk text biasa seperti paragraph */
 
-    --borderColor: #f1f1f1;
+    --borderColor: #fff;
     --lineColor: #d9d9d9; /* Untuk line di pre-title */
 
     --primaryBackgroundColor: #fff;
-    --secondaryBackgroundColor: #fbfbfb;
+    --secondaryBackgroundColor: #54b8fc;
     --thirdBackgroundColor: #f5f3fe;
 
-    --primaryIconColor: #94CD7F;
-    --primaryIconColorHover: #C7E2AF;
+    --primaryIconColor: #0d61a7;
+    --primaryIconColorHover: #1679AB;
 
     --sectionPadding: 6rem 0;
 
@@ -18,7 +18,7 @@
 }
 
 /* style Section
-/* Form untuk keseluruhan style */
+/* -------------------------------------Form untuk keseluruhan style--------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -46,7 +46,7 @@ a {
     text-decoration: none;
 }
 
-/* Header style */
+/* ---------------------------------Header style----------------------------------- */
 .main-container {
     width: 1200px;
     margin: 0 auto;
@@ -58,7 +58,7 @@ a {
     }
 }
 
-/* Navigasi style */
+/* ---------------------------------Navigasi style--------------------------------- */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -83,10 +83,6 @@ a {
     height: auto;
 }
 
-/* .logo a {
-    color: var(--primaryTextColor);
-} */
-
 nav ul li {
     display: flex;          /* Wadah */
     align-items: center;    /*rata tengah atas bawah*/
@@ -96,7 +92,7 @@ nav ul li a {
     color: var(--primaryTextColor);
 }
 
-/* Introduction */
+/* -----------------------------------Introduction------------------------------------- */
 #introduction {
     padding-top: 20px;
     height: 520px;
@@ -126,7 +122,7 @@ nav ul li a {
     justify-content: center;
 }
 
-/* main style */
+/* ---------------------------main style-------------------------------*/
 #bmi {
     padding: var(--sectionPadding);
     background: var(--secondaryBackgroundColor);
@@ -137,7 +133,9 @@ nav ul li a {
     display:grid;
     grid-template-columns: 1fr 1fr; /* 2 columns with equal width */
     gap: 20px;
-    align-items: baseLine;
+    align-items: center;
+    /* justify-items: center;  */
+    padding: 10px;
 }
 
 .bmi-group {
@@ -163,9 +161,182 @@ nav ul li a {
 }
 
 .bmi-right {
+    display:grid;
+    flex-direction: column;
+    gap:20px;
     grid-column: 2;
   }
 
+/* ---------------------Usia Range Slider Style--------------------- */
+.bmi-range-age {
+    height: 80px;
+    width: 380px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 0 65px 0 45px;
+    text-align: center;
+    place-items: center;
+}
+
+.bmi-range-age .slider-value {
+    position: relative;
+    width: 100%
+}
+
+.bmi-range-age .slider-value span {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    color: #fff;
+    font-weight: bold;
+    top: -40px;
+    transform: translateX(-50%);
+    line-height: 55px;
+    z-index: 2;
+}
+
+.bmi-range-age .slider-value span:after {
+    position: absolute;
+    content: "";
+    height: 45px;
+    width: 45px;
+    background: var(--primaryIconColor);
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    border: 3px solid var(--borderColor);
+    z-index: -1;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%; 
+}
+
+.bmi-range-age .field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.bmi-range-age .field input {
+    -webkit -appearance: none;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.bmi-range-age .field input::-webkit-slider-thumb {
+    -webkit -appearance: none;
+    height: 20px;
+    width: 20px;
+    background: var(--primaryIconColor);
+    border-radius: 50%;
+    border: 1px solid var(--itemBorderRadius);
+    cursor:pointer;
+
+}
+
+/* ------------------------------------------BMI Jenis kelamin style---------------------------------------- */
+.gender-selection, .activity-selection{
+    display: flex;
+    gap: 10px;
+}
+
+.gender-selection img{
+    width: 125px;
+    height: 125px;
+}
+
+.gender-option, .activation-option{
+    border: 2px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.gender-option.active, .activity-option.active{
+    border-color: var(--borderColor);
+    background-color: var(--primaryIconColorHover);
+}
+
+/* --------------------------------------------Berat Renge Slider Style---------------------------------------- */
+.bmi-range-weight {
+    height: 80px;
+    width: 380px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 0 65px 0 45px;
+    text-align: center;
+    place-items: center;
+}
+
+.bmi-range-weight .slider-value {
+    position: relative;
+    width: 100%
+}
+
+.bmi-range-weight .slider-value span {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    color: #fff;
+    font-weight: bold;
+    top: -40px;
+    transform: translateX(-50%);
+    line-height: 55px;
+    z-index: 2;
+}
+
+.bmi-range-weight .slider-value span:after {
+    position: absolute;
+    content: "";
+    height: 45px;
+    width: 45px;
+    background: var(--primaryIconColor);
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    border: 3px solid var(--borderColor);
+    z-index: -1;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%; 
+}
+
+.bmi-range-weight .field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.bmi-range-weight .field input {
+    -webkit -appearance: none;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.bmi-range-weight .field input::-webkit-slider-thumb {
+    -webkit -appearance: none;
+    height: 20px;
+    width: 20px;
+    background: var(--primaryIconColor);
+    border-radius: 50%;
+    border: 1px solid var(--itemBorderRadius);
+    cursor:pointer;
+
+}
+
+/* --------------------------------------------Input style in main--------------------------------------------- */
 p {
     text-align: justify;
     margin-top: -10px;
@@ -176,7 +347,7 @@ label, legend {
     color: #333333
 }
 
-input[type="text"], input[type="range"], button, output {
+input[type="text"], input[type="range"], input[type="number"], button, output {
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 30px;
@@ -195,94 +366,88 @@ output {
     font-weight: bold;
 }
 
-Fieldset {
+fieldset {
     border: none;
     paddings:0;
 } 
 
-
-
-/* Main style */
-/* .container {
-    width: 80%;
-    max-width: 900px;
-    background-color: #ffffff;
-    border-radius:10px;
-    box-shadow: 0 0 20ox rgba(0, 0, 0, 0.1);
-    padding:20px;
-    margin: auto;
-}
-
-/* #bmi {
-    border: 1px solid;
+/* ---------------------------Style Button Hitung------------------------------- */
+button#calculate-button, #reset-button {
     padding: 15px;
-    background-color: cadetblue;
-} */
-
-/* .bmi-section { 
-    display: flex;
-    flex-direction:row;
-    gap:20px;
-    justify-content:space-beetween;
-}
-
-aside {
-    display:flex;
-    flex-direction: column;
-    flex: 1;
-    gap:20px;
-}  */
-
-/* .form-left {
-    flex: 50px;
-}
-
-.form-right {
-    flex: 50px;
-} */
-
-/* .bmi-group {
-    display:flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-}
-
-.bmi-left .form-group,
-.bmi-right .form-group {
-    flex: 1;
-}
-
-p {
-    text-align: justify;
-    margin-top: -10px;
-}
-
-label, legend {
-    font-weight: bold;
-    color: #333333
-}
-
-input[type="text"], input[type="range"], button, output {
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-input [type="text"] {
-    width: 100%
-}
-
-input [type="text"] {
-    width: 100%;
-}
-
-output {
-    font-weight: bold;
-}
-
-Fieldset {
+    background-color: #ff8000;
+    color: #fff;
     border: none;
-    paddings:0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#calculate-button:hover, #reset-button:hover{
+    background-color: #cc6600;
+}
+
+/* -------------------------Style Section Result----------------------------------- */
+/* .bmi-result {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-result-left, .bmi-result-right {
+    padding: 10px;
+}
+
+.bmi-result-left h3, .bmi-result-right h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.bmi-result-left p, .bmi-result-right p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 1em;
 } */
+
+.bmi-result {
+    display: block; /* Make sure it displays as block */
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.bmi-result-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between columns */
+}
+
+.bmi-result-left, .bmi-result-right {
+    padding: 15px;
+}
+
+.bmi-result-left {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-result-right {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Style after Reset Button */
+#result-section {
+    display: none;
+}
+
+footer {
+    text-align: center;
+}
